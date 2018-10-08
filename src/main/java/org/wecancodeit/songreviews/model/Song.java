@@ -9,9 +9,10 @@ public class Song {
 	private String category;
 	private String releaseDate;
 	private String content;
+	private String uri;
 
 	public Song(Long id, String name, String artist, String album, String image, String category, String releaseDate,
-			String content) {
+			String content, String uri) {
 		this.id = id;
 		this.name = name;
 		this.artist = artist;
@@ -20,6 +21,7 @@ public class Song {
 		this.category = category;
 		this.releaseDate = releaseDate;
 		this.content = content;
+		this.uri = uri;
 	}
 
 	public Song(long id) {
@@ -64,5 +66,9 @@ public class Song {
 
 	public String getContent() {
 		return content;
+	}
+
+	public String getUri() {
+		return uri;
 	}
 }
