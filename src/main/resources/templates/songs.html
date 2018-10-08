@@ -26,13 +26,18 @@
 					attribute that Thymeleaf is interacting
 					with
 				-->
-				<li th:each="song : ${songs}"><a th:href="|/songs/${song.id}|" th:text="${song.artist+' - '+song.name}">Song</a></li>
+				<li th:each="song : ${songs}"><a th:href="|/songs/${song.id}|" th:text="${song.category}">Song</a>
+					<ol>
+					<li th:each="song : ${songs}"><a th:href="|/songs/${song.id}|" th:text="${song.artist+' - '+song.name}">Song</a>
+					</li>
+					</ol>
+				</li>
 			</ul>
 		</nav>
 	</header>
 	<main>
 		<ul>
-			<li th:each="song : ${songs}"><a th:href="|/songs/${song.id}|" th:text="${song.name}">Song</a></li>
+			<li th:each="song : ${songs}"><a th:href="|/song/${song.id}|" th:text="${song.name}">Song</a></li>
 		</ul>
 	</main>
 	<footer>

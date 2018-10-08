@@ -17,7 +17,7 @@
 </head>
 <body>
 	<header>
-		<h1 th:text="${song.name}${song.artist}">Song</h1><!-- Name -->
+		<h1 th:text="${song.name}$+' '+{song.artist}">Song</h1><!-- Name -->
 		<nav>
 			<ul>
 				<li><a href="/songs">Songs</a></li>
@@ -30,6 +30,7 @@
 			This is (imo) the best way to concatenate
 			in Thymeleaf
 		-->
+		<p>HEY THIS IS TEXT</p>
 		<a th:href="|https://github.com/${song.albumArtUrl}|">Album Art</a><!-- Album Art URL  -->
 	</main>
 	<footer>
