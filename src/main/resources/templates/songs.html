@@ -1,47 +1,24 @@
-<!-- 
-	All templates represent the View layer.
-	
-	These are the pieces that build the things
-	that get rendered in the browser.
-	
-	This is what your user will see/interact with.
-	
-	!DON'T FORGET SEMANTIC MARKUP!
- -->
 <!DOCTYPE html>
-<!-- !YOU NEED THIS FOR THYMELEAF TO WORK! -->
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<title>Songs</title>
 </head>
 <body>
 
 	<header>
-		<h1>Songs</h1>
-		<nav>
-			<ul>
-				<li><a href="/songs">Top 5 Bangers</a></li>
-				<!--
-					Remember you need 'th:' prefacing any
-					attribute that Thymeleaf is interacting
-					with
-				-->
-				<li th:each="song : ${songs}"><a th:href="|/songs/${song.id}|" th:text="${song.category}">Song</a>
-					<ol>
-					<li th:each="song : ${songs}"><a th:href="|/songs/${song.id}|" th:text="${song.artist+' - '+song.name}">Song</a>
-					</li>
-					</ol>
-				</li>
-			</ul>
-		</nav>
+		<h1>Top 5 Bangers by Genre</h1>
 	</header>
 	<main>
 		<ul>
-			<li th:each="song : ${songs}"><a th:href="|/song/${song.id}|" th:text="${song.name}">Song</a></li>
+			<img src="/images/recordplayer.jpg" alt="All Bangers" style="width:384px;height:512px;">
+			<p> Review information </p>
+			<li th:each="song : ${songs}">
+			<a th:href="|/songs/${song.id}|" th:text="${song.category}+': '+${song.artist}+' - '+${song.name}">Song</a></li>
 		</ul>
 	</main>
 	<footer>
-		<small>&copy; WCCI 2018</small>
+		<small>&copy; Justin Huffman 2018</small>
 	</footer>
 </body>
 </html>

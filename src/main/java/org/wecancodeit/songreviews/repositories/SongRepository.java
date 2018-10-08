@@ -20,7 +20,7 @@ public class SongRepository {
 				"GREATREVIEW"));
 		add(new Song(4L, "Big Beast (ft. Bun B, T.I., and Trouble)", "Killer Mike", "R.A.P. Music", "killermike.jpg",
 				"Hip Hop", "March 16, 2012", "GREATREVIEW"));
-		add(new Song(5L, "A Milli", "Lil Wayne", "Tha Carter III", "amili.jpg", "Hip Hop", "March 11, 2008",
+		add(new Song(5L, "A Milli", "Lil Wayne", "Tha Carter III", "amilli.jpg", "Hip Hop", "March 11, 2008",
 				"GREATREVIEW"));
 		add(new Song(6L, "Back in Black", "AC/DC", "Back in Black", "acdc.jpg", "Rock", "December 21, 1980",
 				"GREATREVIEW"));
@@ -39,6 +39,14 @@ public class SongRepository {
 
 	public void add(Song song) {
 		songs.put(song.getId(), song);
+	}
+
+//	public void add(Song underTest) {
+//		return SongRepository.get(id);
+//	}
+
+	public boolean isEmpty() {
+		return songs.isEmpty();
 	}
 
 	public Song findOne(Long id) {

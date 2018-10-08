@@ -5,21 +5,33 @@ public class Song {
 	private String name;
 	private String artist;
 	private String album;
-	private String albumImgUrl;
+	private String image;
 	private String category;
 	private String releaseDate;
 	private String content;
 
-	public Song(Long id, String name, String artist, String album, String albumImgUrl, String category,
-			String releaseDate, String content) {
+	public Song(Long id, String name, String artist, String album, String image, String category, String releaseDate,
+			String content) {
 		this.id = id;
 		this.name = name;
 		this.artist = artist;
 		this.album = album;
-		this.albumImgUrl = albumImgUrl;
+		this.image = image;
 		this.category = category;
 		this.releaseDate = releaseDate;
 		this.content = content;
+	}
+
+	public Song(long id) {
+		super();
+		this.id = id;
+		this.name = "Them good beats";
+		this.artist = "Song guy";
+		this.album = "Great collection of songs";
+		this.image = "";
+		this.category = "Rock";
+		this.releaseDate = "November 3, 1981";
+		this.content = "dope ass review";
 	}
 
 	public Long getId() {
@@ -38,8 +50,8 @@ public class Song {
 		return album;
 	}
 
-	public String getAlbumImgUrl() {
-		return albumImgUrl;
+	public String getImage() {
+		return image;
 	}
 
 	public String getCategory() {
