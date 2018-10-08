@@ -20,13 +20,13 @@
 		<h1>Songs</h1>
 		<nav>
 			<ul>
-				<li><a href="/songs">Some Songs</a></li>
+				<li><a href="/songs">Top 5 Bangers</a></li>
 				<!--
 					Remember you need 'th:' prefacing any
 					attribute that Thymeleaf is interacting
 					with
 				-->
-				<li th:each="song : ${songs}"><a th:href="|/songs/${song.id}|" th:text="${song.name}">Song</a></li>
+				<li th:each="song : ${songs}"><a th:href="|/songs/${song.id}|" th:text="${song.artist+' - '+song.name}">Song</a></li>
 			</ul>
 		</nav>
 	</header>

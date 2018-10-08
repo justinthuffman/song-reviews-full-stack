@@ -17,7 +17,7 @@
 </head>
 <body>
 	<header>
-		<h1 th:text="${song.name}">Song</h1><!-- Name -->
+		<h1 th:text="${song.name}${song.artist}">Song</h1><!-- Name -->
 		<nav>
 			<ul>
 				<li><a href="/songs">Songs</a></li>
