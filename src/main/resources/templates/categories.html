@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="./style.css" />
+<link rel="stylesheet" type="text/css" href="./layout.css" />
+
+<head>
+
+<title>Song Categories</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<span id="title">Song Categories</span>
+
+		</header>
+		<section class="main">
+			<h3>Review Categories</h3>
+			<ul>
+				<li th:each="category: ${categories}"><a
+					th:href="|/category/${category.id}|" th:text="|${category.category}">:
+					th:text="${category.category}"></a></li>
+			</ul>
+		</section>
+		<footer><small>&copy; Justin Huffman 2018</small></footer>
+	</div>
+</body>
+</html>

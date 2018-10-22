@@ -5,7 +5,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="./style.css" />
 <link rel="stylesheet" type="text/css" href="./layout.css" />
-<title th:text="${category.category}"></title>
+<title th:text="${category.id}"></title>
 </head>
 <body>
 	<div class="container">
@@ -15,17 +15,14 @@
 		</header>
 
 		<section class="main">
-			<h1 th:text="${category.name}"></h1>
+			<h1 th:text="${category.caategory}"></h1>
 			<ul>
-				<li th:each="song: ${category.reviews}"><a
-					th:href="@{./songs(id=${songs.id})}" th:text="${i.title}"></a></li>
+				<li th:each="song: ${song.id}"><a
+					th:href="|/category/(${category.id}|" th:text="${category.category}"></a></li>
 			</ul>
 		</section>
-		<footer>
-			<a id="home" href="http://localhost:8080/reviews">Home</a>
-		</footer>
+<footer><small>&copy; Justin Huffman 2018</small></footer>
 	</div>
-	<!-- to close container -->
 
 </body>
 </html>

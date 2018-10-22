@@ -1,5 +1,11 @@
 package org.wecancodeit.songreviews.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+
 @Entity
 public class Song {
 
@@ -10,20 +16,18 @@ public class Song {
 	private String artist;
 	private String album;
 	private String image;
+
+	@ManyToOne
+	private Category category;
+
 	private String releaseDate;
+
+	@Lob
 	private String content;
 	private String uri;
 
-	@ManyToOne
-	private String category;
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public Song(Long id, String name, String artist, String album, String image, String category, String releaseDate,
+	public Song(String name, String artist, String album, String image, Category category, String releaseDate,
 			String content, String uri) {
-		this.id = id;
 		this.name = name;
 		this.artist = artist;
 		this.album = album;
@@ -36,18 +40,6 @@ public class Song {
 
 	public Song() {
 	}
-
-//	public Song(long id) {
-//		super();
-//		this.id = id;
-//		this.name = "Them good beats";
-//		this.artist = "Song guy";
-//		this.album = "Great collection of songs";
-//		this.image = "";
-//		this.category = "Rock";
-//		this.releaseDate = "November 3, 1981";
-//		this.content = "dope review";
-//	}
 
 	public Long getId() {
 		return id;
@@ -69,9 +61,9 @@ public class Song {
 		return image;
 	}
 
-//	public String getCategory() {
-//		return category;
-//	}
+	public Category getCategory() {
+		return category;
+	}
 
 	public String getReleaseDate() {
 		return releaseDate;
