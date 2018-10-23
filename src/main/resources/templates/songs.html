@@ -1,31 +1,41 @@
-<!DOCTYPE HTML>
 
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<link rel="stylesheet" type="text/css" href="./style.css" />
-<link rel="stylesheet" type="text/css" href="./layout.css" />
-<title th:text="${category.category}"></title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<title th:text="${song.name}">PlaceHolder</title>
 </head>
 <body>
 	<div class="container">
-		<header>
-			<span id="title">Songs by Category</span>
-
-		</header>
-
+	<header> 
+		<h1 th:text="${song.artist}+' - '+${song.name}">Artist's Song</h1>
+	</header>
 		<section class="main">
-			<h1 th:text="${category.name}"></h1>
-			<ul>
-				<li th:each="song: ${category.reviews}"><a
-					th:href="@{./songs(id=${songs.id})}" th:text="${i.title}"></a></li>
-			</ul>
+			<div class="artandlink">
+				<p><iframe th:src="|https://open.spotify.com/embed/track/${song.uri}|" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media">iframe placeholder</iframe></p>	
+				<img th:src="@{|/images/${song.image}|}" alt="Album Art" style="width:300px;height:300px;">
+			</div>
+			<div class="trackinfo">
+				<h2 th:text="'Album: '+${song.album}">Album</h2>
+				<h3 th:text="'Release date: '+${song.releaseDate}">Release Date</h3>
+				<h3 th:text="'Category: '+${song.category}">Category</h3>
+			</div>
+
+			<blockckquote th:text="${song.content}">Place holder Content</blockquote>
 		</section>
+
 		<footer>
-			<a id="home" href="http://localhost:8080/reviews">Home</a>
+			<script>
+				document.write('<a href="' + document.referrer + '">Back to Genre</a>');
+			</script>
+			<a href="/categories"> | Back to Categories</a>
+			<p><small>&copy; Justin Huffman 2018</small></p>
 		</footer>
 	</div>
-	<!-- to close container -->
-
 </body>
 </html>

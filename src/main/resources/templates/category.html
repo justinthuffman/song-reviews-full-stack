@@ -3,25 +3,29 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<link rel="stylesheet" type="text/css" href="./style.css" />
-<link rel="stylesheet" type="text/css" href="./layout.css" />
-<title th:text="${category.id}"></title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="/css/style.css">
+<title th:text="${category.category}"></title>
 </head>
 <body>
 	<div class="container">
 		<header>
-			<span id="title">Songs by Category</span>
-
+			<h1 th:text="${category.category}"></h1>
 		</header>
 
 		<section class="main">
-			<h1 th:text="${category.caategory}"></h1>
 			<ul>
-				<li th:each="song: ${song.id}"><a
-					th:href="|/category/(${category.id}|" th:text="${category.category}"></a></li>
+				<li class="songlist" th:each="i: ${category.songs}"><a
+					th:href="|/songs/${i.id}|" th:text="${i.artist}+' - '+${i.name}"></a></li>
 			</ul>
 		</section>
-<footer><small>&copy; Justin Huffman 2018</small></footer>
+				<footer>
+			<a href="/categories">Back to Categories</a>
+		<p><small>&copy; Justin Huffman 2018</small></p>
+		</footer>
 	</div>
 
 </body>

@@ -21,9 +21,9 @@ public class SongReviewsPopulator implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Category hipHop = new Category("Hip Hop", "hiphop.jpg");
-		Category rock = new Category("Rock", "rock.jpg");
-		Category jazz = new Category("Jazz", "jazz.jpg");
+		Category hipHop = new Category("Hip Hop", "hiphop.png");
+		Category rock = new Category("Rock", "rock.png");
+		Category jazz = new Category("Jazz", "jazz.png");
 
 		hipHop = categoryRepo.save(hipHop);
 		rock = categoryRepo.save(rock);

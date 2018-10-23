@@ -18,10 +18,10 @@ public class Category {
 	private String image;
 
 	@OneToMany(mappedBy = "category")
-	private Set<Song> reviews = new HashSet<Song>();
+	private Set<Song> songs = new HashSet<Song>();
 
 	public Set<Song> getSongs() {
-		return reviews;
+		return songs;
 
 	}
 
@@ -36,10 +36,6 @@ public class Category {
 
 	public String getImage() {
 		return image;
-	}
-
-	public Set<Song> getReviews() {
-		return reviews;
 	}
 
 	public Long getId() {

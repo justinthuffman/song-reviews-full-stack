@@ -1,28 +1,35 @@
 <!DOCTYPE HTML>
 
 <html xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" type="text/css" href="./style.css" />
-<link rel="stylesheet" type="text/css" href="./layout.css" />
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<title>Song Categories</title>
+	<link rel="stylesheet" href="/css/style.css">
+	
+<title>Song Reviews by Genre</title>
 </head>
 <body>
 	<div class="container">
 		<header>
-			<span id="title">Song Categories</span>
-
+		<h1>Song Reviews by Genre</h1>
 		</header>
 		<section class="main">
-			<h3>Review Categories</h3>
+			<h2>Genres:</h2>
 			<ul>
-				<li th:each="category: ${categories}"><a
-					th:href="|/category/${category.id}|" th:text="|${category.category}">:
-					th:text="${category.category}"></a></li>
+				<li class = "catlist" th:each="category: ${categories}">
+					<img th:src="@{|/images/${category.image}|}" alt="genre image" style="width:150px;height:150px;">
+					<a
+					th:href="|/category/${category.id}|"
+					th:text="${category.category}"></a>
+				</li>
 			</ul>
 		</section>
-		<footer><small>&copy; Justin Huffman 2018</small></footer>
+<footer><p><small>&copy; Justin Huffman 2018</small></p>
+		<small><div>Icons made by <a href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></small>
+</footer>
 	</div>
 </body>
 </html>

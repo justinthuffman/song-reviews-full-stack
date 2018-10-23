@@ -27,7 +27,6 @@ public class CategoryController {
 
 	@GetMapping("/category/{id}")
 	public String getCategory(@PathVariable(value = "id") Long id, Model model) {
-		System.out.println(id);
 		model.addAttribute("category", categoryRepo.findById(id).get());
 		return "category";
 	}

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    color: #297373;
+}
+
+a:visited {
+    color: #297373;
+}
+
+a:hover {
+    color: #FF8552;
+}
+
+/*a:active {
+    color: blue;
+}*/
+
+head {
+  font-family: Archivo, sans-serif;
+  background-color: #E6E6E6;
+  color: #39393A;
+}
+
+body {
+  font-family: Archivo, sans-serif;
+  background-color: #E6E6E6;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #39393A;
+}
+h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.75em;
+  border-radius: 25px;
+  border-style: double;
+  border-width: .25em;
+  border-color: #297373;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  padding: 1em;
+  background-color: #E6E6E6;
+  color: #39393A;
+}
+
+.catlist {
+  list-style: none;
+  font-family: Archivo, sans-serif;
+  color: #297373;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  display: inline;
+  padding: 1em;
+}
+
+.songlist {
+  list-style: none;
+  font-family: Archivo, sans-serif;
+  color: #297373;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  padding: 1em;
+}
+
+footer {
+  justify-content: center;
+  font-family: Archivo, sans-serif;
+  color: #39393A;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  border-style: double;
+  background-color: #E6E6E6;
+  padding: .1em;
+  border-radius: 25px;
+  border-width: .5em;
+  border-color: #297373;
+}
+
+h2 {
+  justify-content: center;
+  color: #39393A;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  padding: .5em;
+  background-color: #E6E6E6;
+
+}
+
+h3 {
+  justify-content: center;
+  color: #39393A;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  padding: .5em;
+  background-color: #E6E6E6;
+
+}
+
+.container {
+  font-family: Archivo, sans-serif;
+  color: #39393A;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #FF8552;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 51vw;
+  border-radius: 25px;
+
+}
+
+.main {
+  font-family: Archivo, sans-serif;
+  color: #39393A;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border-style: double;
+  border-width: .5em;
+  padding: 1em;
+  border-color: #297373;
+  background-color: #E6E6E6;
+  align-self: center;
+  align-content: center;
+}
+
+.artandlink {
+  font-family: Archivo, sans-serif;
+  color: #39393A;
+  display: grid;
+  grid-gap: 10px;
+  align-self: left;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-color: #297373;
+  background-color: #E6E6E6;
+  align-self: center;
+  align-content: center;
+
+}
+
+
+.trackinfo {
+  align-self: right;
+  padding: 2em;
+}
+
+blockquote {
+  font-style: italic;
+}
