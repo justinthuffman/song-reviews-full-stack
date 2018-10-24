@@ -20,10 +20,12 @@
 			<h2>Genres:</h2>
 			<ul>
 				<li class = "catlist" th:each="category: ${categories}">
-					<img th:src="@{|/images/${category.image}|}" alt="genre image" style="width:150px;height:150px;">
-					<a
-					th:href="|/category/${category.id}|"
-					th:text="${category.category}"></a>
+					
+					<a th:href="|/category/${category.id}|">
+						<img th:src="@{|/images/${category.image}|}" alt="genre image" style="width:150px;height:150px;">
+							<span th:text="${category.category}">
+							</span>
+					</a>
 				</li>
 			</ul>
 		</section>
